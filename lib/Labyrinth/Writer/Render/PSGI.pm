@@ -35,7 +35,7 @@ use Labyrinth::Variables;
 # -------------------------------------
 # Variables
 
-my $cgi = CGI::PSGI->new();
+my $cgi = CGI::PSGI->new($settings{psgi}{env});
 
 # -------------------------------------
 # The Subs
@@ -92,10 +92,9 @@ sub publish {
     my ($self, $headers, $body) = @_;
 
     my %cgihash = map { '-' . $_ => $headers->{$_} } grep {$headers->{$_}} qw(type status cookie attachment);
-    #LogDebug("CGI Hash=".Dumper(\%cgihash));
 
     ($settings{psgi}{status},$settings{psgi}{headers}) = $cgi->psgi_header( %cgihash );
-    $settings{psgi}{body} .= $body;
+    $settings{psgi}{body} .= $$body;
 }
 
 1;
