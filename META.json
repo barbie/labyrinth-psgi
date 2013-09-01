@@ -38,7 +38,7 @@
                 "CGI::Cookie": "0",
                 "CGI::PSGI": "0",
                 "IO::File": "0",
-                "Labyrinth": "0"
+                "Labyrinth": "0",
                 "Labyrinth::Variables": "0"
             }
         }
