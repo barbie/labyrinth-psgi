@@ -47,6 +47,10 @@ __END__
 
 Labyrinth::PSGI - Digital Image Utilities for Labyrinth
 
+=head1 DESCRIPTION
+
+Handles the driver software for image manipulation;
+
 =head1 SYNOPSIS
 
 Update your settings file to include the following lines.
@@ -54,9 +58,41 @@ Update your settings file to include the following lines.
     query-parser=PSGI
     writer-render=PSGI
 
-=head1 DESCRIPTION
+Then create a .psgi file for your application, containing the following:
 
-Handles the driver software for image manipulation;
+    use Labyrinth::PSGI;
+
+    my $app = sub {
+        my $env = shift;
+        my $lab = Labyrinth::PSGI->new( $env, '/var/www/<mywebsite>/cgi-bin/config/settings.ini' );
+        return $lab->run();
+    };
+
+You may also need to add builder instructions. These should be added to your 
+.psgi file, and may look something like:
+
+    use Plack::Builder;
+
+    builder {
+        enable "Static", path => qr!^/images/!,     root => '../html';
+        enable "Static", path => qr!^/(cs|j)s/!,    root => '../html';
+        enable "Static", path => qr!^/favicon.ico!, root => '../html';
+        enable "Static", path => qr!^/robots.txt!,  root => '../html';
+        $app;
+    };
+
+The above lines allow static files to pass through and be retrieved from the
+file system, rather than through your application.
+
+=head1 METHODS
+
+=head2 new( $env [, $config ] )
+
+The constructor. Must be passed the environment variable from the PSGI server. 
+You may optionally pass the Labyrinth configuration file as well, or via the 
+run() method.
+
+=head2 run( [ $config ] )
 
 =head1 SEE ALSO
 

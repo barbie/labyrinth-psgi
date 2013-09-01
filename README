@@ -15,6 +15,7 @@ installed:
   CGI::Cookie
   CGI::PSGI
   IO::File
+  Labyrinth
   Labyrinth::Variables
 
 AUTHOR
