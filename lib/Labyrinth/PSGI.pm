@@ -45,11 +45,12 @@ __END__
 
 =head1 NAME
 
-Labyrinth::PSGI - Digital Image Utilities for Labyrinth
+Labyrinth::PSGI - PSGI handler for Labyrinth
 
 =head1 DESCRIPTION
 
-Handles the driver software for image manipulation;
+Allow Labyrinth to run under Plack. Use the PSGI protocol to interface with
+a Plack web server to process web requests.
 
 =head1 SYNOPSIS
 
@@ -106,7 +107,7 @@ Miss Barbell Productions, L<http://www.missbarbell.co.uk/>
 
 =head1 COPYRIGHT & LICENSE
 
-  Copyright (C) 2013 Barbie for Miss Barbell Productions
+  Copyright (C) 2013-2014 Barbie for Miss Barbell Productions
   All Rights Reserved.
 
   This module is free software; you can redistribute it and/or

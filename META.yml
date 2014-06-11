@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name:                     Labyrinth-PSGI
 version:                  1.00
-abstract:                 Allow Labyrinth to run under Plack
+abstract:                 PSGI handler for Labyrinth
 author:
   - Barbie <barbie@cpan.org>
 

@@ -1,3 +1,7 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
 use 5.006;
 
 use ExtUtils::MakeMaker;
@@ -6,7 +10,7 @@ WriteMakefile(
     AUTHOR              => 'Barbie <barbie@cpan.org>',
     NAME                => 'Labyrinth-PSGI',
     VERSION_FROM        => 'lib/Labyrinth/PSGI.pm',
-    ABSTRACT	        => 'Allow Labyrinth to run under Plack',
+    ABSTRACT	        => 'PSGI handler for Labyrinth',
     NO_META             => 1,
     PREREQ_PM           => {
 

@@ -1,7 +1,7 @@
 {
     "name": "Labyrinth-PSGI",
     "version": "1.00",
-    "abstract": "hAllow Labyrinth to run under Plack",
+    "abstract": "PSGI handler for Labyrinth",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
     ],
