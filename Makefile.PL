@@ -8,7 +8,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     AUTHOR              => 'Barbie <barbie@cpan.org>',
-    NAME                => 'Labyrinth-PSGI',
+    NAME                => 'Labyrinth::PSGI',
     VERSION_FROM        => 'lib/Labyrinth/PSGI.pm',
     ABSTRACT	        => 'PSGI handler for Labyrinth',
     NO_META             => 1,
