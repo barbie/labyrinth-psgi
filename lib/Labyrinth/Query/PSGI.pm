@@ -44,8 +44,8 @@ __END__
 
 =head1 SEE ALSO
 
-  CGI::PSGI,
-  Labyrinth
+L<CGI::PSGI>,
+L<Labyrinth>
 
 =head1 AUTHOR
 
