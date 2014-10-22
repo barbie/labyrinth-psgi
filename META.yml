@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                     Labyrinth-PSGI
-version:                  1.01
+version:                  1.02
 abstract:                 PSGI handler for Labyrinth
 author:
   - Barbie <barbie@cpan.org>
@@ -27,13 +27,13 @@ build_requires:
 provides:
   Labyrinth::PSGI:
     file:     lib/Labyrinth/PSGI.pm
-    version:  1.01
+    version:  1.02
   Labyrinth::Query::PSGI:
     file:     lib/Labyrinth/Query/PSGI.pm
-    version:  1.01
+    version:  1.02
   Labyrinth::Writer::Render::PSGI:
     file:     lib/Labyrinth/Writer/Render/PSGI.pm
-    version:  1.01
+    version:  1.02
 
 no_index:
   directory:
